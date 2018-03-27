@@ -11,12 +11,12 @@ informacion_label = r1.read().decode("utf-8")  #guardamos en una variable toda l
 conn.close()
 
 label_mejorada = json.loads(informacion_label)  #mejoramos la info obtenida
-medicamento=label_mejorada['results']   #nos quedamos solo con la info del apartado results, quitando meta
+medicamento=label_mejorada['results'][0]   #nos quedamos solo con la info del apartado results, quitando meta
 
 print('ID: ', medicamento['id'])   #seleccionamos la informacion requerida fijándonos en la indexacion
                                     #que tiene en el archivo json
-print('Proposito: ', medicamento['purpose'])
-print('Fabricante(s): ', medicamento['manufacturer_name'])
+print('Proposito: ', medicamento['purpose'][0])
+print('Fabricante(s): ', medicamento['openfda']['manufacturer_name'][0])
 
 
 
