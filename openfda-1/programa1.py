@@ -13,8 +13,7 @@ conn.close()
 label_mejorada = json.loads(informacion_label)  #mejoramos la info obtenida
 medicamento=label_mejorada['results'][0]   #nos quedamos solo con la info del apartado results, quitando meta
 
-print('ID: ', medicamento['id'])   #seleccionamos la informacion requerida fijándonos en la indexacion
-                                    #que tiene en el archivo json
+print('ID: ', medicamento['id'])   #seleccionamos la informacion requerida fijándonos en la indexacion en el archivo
 print('Proposito: ', medicamento['purpose'][0])
 print('Fabricante(s): ', medicamento['openfda']['manufacturer_name'][0])
 
