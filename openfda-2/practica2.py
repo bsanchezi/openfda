@@ -6,7 +6,7 @@ numero_salto = 0
 while True:
 
     conn = http.client.HTTPSConnection("api.fda.gov")
-    conn.request("GET", '/drug/label.json?limit=100&skip=' +str(skip_number)+'&search=substance_name:"ASPIRIN"', None, headers)
+    conn.request("GET", '/drug/label.json?limit=100&skip=' +str(numero_salto)+'&search=substance_name:"ASPIRIN"', None, headers)
     #con la función skip, selecciono de 100 en 100 los medicamentos gracias al bucle while
     #el bucle sólo para cuando hay menos de 100, es decir, cuando ya no hay más después
     #con la función search selecciono la información que debe contener el medicamento
