@@ -7,7 +7,6 @@ import json
 PORT = 8011
 
 
-
 lista_medicamentos = []
 headers = {'User-Agent': 'http-client'}
 
@@ -55,9 +54,6 @@ class testHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         return
 
 
-# ----------------------------------
-# El servidor comienza a aqui
-# ----------------------------------
 # Establecemos como manejador nuestra propia clase
 Handler = testHTTPRequestHandler
 
