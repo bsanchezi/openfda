@@ -11,7 +11,6 @@ print(r1.status, r1.reason)
 informacion_label = r1.read().decode("utf-8")
 conn.close()
 
-
 label_mejorada = json.loads(informacion_label)
 for i in range(len(label_mejorada['results'][0])):
     medicamento=label_mejorada['results'][i]
